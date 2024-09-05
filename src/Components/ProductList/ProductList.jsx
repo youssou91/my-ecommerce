@@ -5,7 +5,7 @@ import './ProductList.css'
 import { Link } from 'react-router-dom';
 
 const ProductList = () => {
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
   return (
     <div>
       <div className="product_list">
@@ -22,7 +22,7 @@ const ProductList = () => {
                     <p>$ {price}</p>
                   </div>
                 </Link>
-                <button className='add_to_card'>Add To Cart</button>
+                <button onClick={()=>addToCart(prod, id)} className='add_to_card'>Add To Cart</button>
               </div>
             );
           })}
