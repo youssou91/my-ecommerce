@@ -45,3 +45,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.navbar.active{
+    padding: 20px;
+    position: fixed;
+    justify-content: space-around;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: -1px 11px 24px 11px rgba(0, 0, 0, 0.75);
+}
