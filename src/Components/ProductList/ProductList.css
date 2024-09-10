@@ -33,7 +33,7 @@
     min-width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
-    height: 250px;
+    height: 200px;
     transform: scale(0.8);
     transition: transform 0.5s ease-in-out;
 }
@@ -94,9 +94,13 @@
     }
 
     .product_img {
-        height: 200px;
-        transform: scale(0.9);
+        max-width: 100%; /* L'image prendra jusqu'à 100% de la largeur de son conteneur */
+        height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur pour maintenir les proportions */
+        transform: scale(0.9); /* Applique un léger redimensionnement */
+        display: block; /* Supprime les espaces blancs en bas de l'image dans certains navigateurs */
+        margin: 0 auto; /* Centrer l'image dans son conteneur */
     }
+    
 
     .product_info h4 {
         font-size: 1.1rem;
@@ -133,8 +137,13 @@
     }
 
     .product_img {
-        height: 230px;
+        max-width: 100%; /* L'image prendra jusqu'à 100% de la largeur de son conteneur */
+        height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur pour maintenir les proportions */
+        transform: scale(0.9); /* Applique un léger redimensionnement */
+        display: block; /* Supprime les espaces blancs en bas de l'image dans certains navigateurs */
+        margin: 0 auto; /* Centrer l'image dans son conteneur */
     }
+    
 
     .product_info h4 {
         font-size: 1.15rem;
@@ -147,21 +156,5 @@
     .add_to_card {
         padding: 9px;
         font-size: 0.95rem;
-    }
-}
-
-/* Styles pour grands appareils (écrans larges) */
-@media (min-width: 1200px) {
-    .product_list {
-        max-width: 1400px;
-    }
-
-    .product_grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-    }
-
-    .product_img {
-        height: 300px;
     }
 }
